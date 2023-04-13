@@ -7,7 +7,7 @@ chat_id = 1307537098 # Ваш chat ID, не меняйте название пе
 
 def solution(x: np.array, 
              y: np.array) -> bool: # Одна или две выборке на входе, заполняется исходя из условия
-    res = mannwhitneyu(x, y, alternative='less')
+    res = mannwhitneyu(x, y, alternative='greater')
     p_value=res.pvalue
     if (p_value<0.06):
         return True
